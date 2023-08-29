@@ -145,6 +145,10 @@ public class WebViewActivity extends Activity {
 
     webview.getSettings().setUserAgentString(System.getProperty("http.agent"));
 
+    webview.clearHistory();
+    webview.clearFormData();
+    webview.clearCache(clearCache);
+
     // Register receiver that may finish this Activity.
     ContextCompat.registerReceiver(
         this, broadcastReceiver, closeIntentFilter, ContextCompat.RECEIVER_EXPORTED);
