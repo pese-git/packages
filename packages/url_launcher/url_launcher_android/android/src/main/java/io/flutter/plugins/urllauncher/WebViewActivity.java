@@ -147,7 +147,7 @@ public class WebViewActivity extends Activity {
 
     webview.clearHistory();
     webview.clearFormData();
-    webview.clearCache(clearCache);
+    webview.clearCache(true);
 
     // Register receiver that may finish this Activity.
     ContextCompat.registerReceiver(
